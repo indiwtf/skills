@@ -4,8 +4,8 @@ Agent skills that teach Claude Code (and other agents that read `SKILL.md` files
 how to use the [Indiwtf](https://indiwtf.com) API — checking whether a website is
 blocked in Indonesia, tracking quota, and resolving Indiwtf smart links.
 
-These are for **Indiwtf users**, not for developing Indiwtf itself. Drop them in
-and ask your assistant things like:
+These are for **Indiwtf users**, not for developing Indiwtf itself. Install them
+with `npx skills add indiwtf/skills`, then ask your assistant things like:
 
 > Is vimeo.com blocked in Indonesia?
 > Check every domain in customers.csv and tell me which ones Indonesian users can't reach.
@@ -22,23 +22,11 @@ and ask your assistant things like:
 
 ## Install
 
-Copy the skill directories where your agent looks for them.
-
-Claude Code — personal (all projects):
-
 ```bash
-mkdir -p ~/.claude/skills
-cp -r indiwtf-* ~/.claude/skills/
+npx skills add indiwtf/skills
 ```
 
-Claude Code — one project only:
-
-```bash
-mkdir -p /path/to/project/.claude/skills
-cp -r indiwtf-* /path/to/project/.claude/skills/
-```
-
-Start a new session afterwards; skills are picked up by name and description, so
+Start a new session afterwards; skills are matched by name and description, so
 just ask your question in plain language.
 
 ## Set your token
